@@ -1,0 +1,59 @@
+#include <iostream>
+#include <stack>
+#include<bits/stdc++.h>
+
+using namespace std;
+int precendence(char c){
+    if(c=='^'){
+    return 3;    
+    }
+else if(c=='*'||c=='/'){
+    return 2;
+}
+else if(c=='+'||c=='-'){
+    return 1;
+}
+return -1;
+}
+string infixToPostFix(string expr){
+    string result="";
+    stack <char> s;
+    for(int i=0;i<expr.length();i++){
+        if(expr[i]=='('){
+            s.push(expr[i]);
+        }
+        else if((expr[i]>='A'&&expr[i]<='Z')||(expr[i]>='a'&&expr[i]<='z')||(expr[i]>=0&&expr[i]<=9)){
+            result=result+expr[i];
+        }
+        else if(expr[i]==')'){
+            while(s.top()!='('){
+                result=result+s.top();
+                s.pop();
+                
+            }
+            s.pop();
+        }
+        else{
+            while( !s.empty() && precendence(expr[i]) <= precendence(s.top()) ){
+                result+=s.top();
+                s.pop();
+                
+            }
+            s.push(expr[i]);
+        }
+    }
+     while(!s.empty()) {
+        result += s.top();
+        s.pop();
+    }
+ 
+    return result;
+}
+int main()
+{
+    string expr="a+b*(c^d-e)^(f+g*h)-i";
+   string result;
+  result=  infixToPostFix(expr);
+  std::cout << result << std::endl;
+    return 0;
+}
