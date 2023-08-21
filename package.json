@@ -1,0 +1,48 @@
+{
+  "name": "testfolder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tryCatch.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "ishan rawat",
+  "license": "ISC",
+  "dependencies": {
+    "@hdworks/dynamo-db-wrapper": "^1.1.1",
+    "aws-sdk": "^2.610.0",
+    "axios": "^0.21.1",
+    "axios-retry": "^3.5.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "csv-write-stream": "^2.0.0",
+    "csv-writer": "^1.6.0",
+    "decimal": "^0.0.2",
+    "decimal.js": "^10.4.3",
+    "express": "^4.17.1",
+    "express-public-ip": "^1.0.1",
+    "form-data": "^4.0.0",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.43",
+    "prompt-sync": "^4.2.0",
+    "random-key": "^0.3.2",
+    "request": "^2.88.2",
+    "retry-axios": "^3.0.0",
+    "save-dev": "0.0.1-security",
+    "serverless-http": "^2.3.1",
+    "string-similarity": "^4.0.4",
+    "tesseract.js": "^4.1.1",
+    "trim": "^1.0.1",
+    "underscore": "^1.13.6",
+    "uuid": "^3.4.0",
+    "whatsapp-web.js": "^1.18.4",
+    "worker-thread": "^1.1.0",
+    "worker-threads": "^1.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
